@@ -1,0 +1,10 @@
+[simulator][WARNING][Travel: travel_1][file: TRIST_1][cargo_data] no containers awaiting in this port
+[simulator][WARNING][Travel: travel_10][file: TRIST_1][cargo_data] last port has waiting containers (ignored)
+[simulator][WARNING][Travel: travel_121][file: ILHFA_1][ID :ITKU0000023][container] illegal ID check ISO 6346 (ID rejected)
+[simulator][WARNING][Travel: travel_4][file: ILHFA_1][ID :ITKU0000023][container] illegal ID check ISO 6346 (ID rejected)
+[simulator][WARNING][Travel: travel_6][file: TRIST_1][cargo_data] no containers awaiting in this port
+[simulator][WARNING][Travel: travel_6][file: ITNAP_1][cargo_data] no containers awaiting in this port
+[simulator][WARNING][Travel: travel_8][file: t] [ship_plan] a position has an equal number of floors, or more, than the number of floors provided in the first line (ignored)
+[simulator][WARNING][Travel: travel_9][file: t][ship_plan] a given position exceeds the X/Y ship limits (ignored)
+[ERROR]Exec format error
+[ERROR]Exec format error

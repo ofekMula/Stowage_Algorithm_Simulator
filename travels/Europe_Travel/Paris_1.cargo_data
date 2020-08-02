@@ -1,0 +1,12 @@
+#ID ISO,#weight,#destination
+
+CSQU0000022,100,Spain
+CSQU0000038,80,Spain
+CSQU0000043,99,Spain
+#Not supposed to be loaded - already on ship for this port
+#ITKU0000066,100,Spain
+MSKU0000011,100,Eilat
+MSKU0000027,100,Spain
+MSKU0000032,80,Spain
+MSKU0000032,80,Spain
+MSKU0000048,100,Eilat

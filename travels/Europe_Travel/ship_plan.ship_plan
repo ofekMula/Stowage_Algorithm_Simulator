@@ -1,0 +1,8 @@
+#floor,#length,#width,    
+4,3,3,
+
+#pos x,# pos y,#available floors,
+0,0,3
+1,0,1
+0,1,2
+1,1,2

@@ -1,0 +1,2 @@
+[simulator][ERROR][Travel: travel_14][file: t][ship_plan] bad first line or file cannot be read altogether (cannot run this travel)
+[simulator][ERROR][Travel: travel_15][file: t][route] travel error- empty file or file cannot be read altogether (cannot run this travel)
