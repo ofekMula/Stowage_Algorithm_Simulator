@@ -1,26 +1,26 @@
-##Objective
+## Objective
 
 An implementation of a stowage model for ships and a simulation to check stowage models.
 the program includes two modules:
 
-1. Simulation
+# 1. Simulation
 A module that loads data from files and then runs several stowage algorithms on the same data to compare the efficiency of the algorithms. It should also be possible to compare algorithms on several “travels” (different routes and cargo). Of course the simulation should also check that stowage algorithms are correct, i.e. they do not miss containers loading or unloading and follow all the rules in general. The simulation would also initiate the ship with its weight calculator, so it can control simulation of weight triggers and check that the stowage algorithms comply.
 
-2. Stowage Algorithm : is a strategy of loading and unloading containers off from a ship when reaching to a port during a travel.
+# 2. Stowage Algorithm : is a strategy of loading and unloading containers off from a ship when reaching to a port during a travel.
 
-##input files :
+## Input files :
 Travel: a folder which presents a path of ports the ship will stop at. each travel contains:
 1.ShipPlan file - the structure of the ship.
 2.Route file - which port (and in which order) the ship will visit at
 3.cargo_data - container awaiting at each port
 
-##output files: 
+## output files: 
 A CSV table format which contains :
 for each algorithm , the number of operations for eaxch travel, and number of errors (the algorthm did).
 the best algorithm will be the one without Errors and the smallest number of operations needed for loading and unloading the containers during the travel.
 
 
-##Multi-threading:
+## Multi-threading:
 1. Our multi threading model is based on the ThreadPoolExecutor example seen in class.
    If the number of threads parameter is 1 or less, the simulation stays sequential and does not spawn any new threads (ThreadPoolExecutor is not called).
 
@@ -63,14 +63,14 @@ the best algorithm will be the one without Errors and the smallest number of ope
         lock it using a lock_guard.
 
 
-##Algorithms implementation:
+## Algorithms implementation:
 The algorithms are improved and once again are different but only by a little.
 As before, both algorithms inherit the StowageAlgorithm base class and
 only the differences are implemented in their own classes.
 Algorithm A is fully improved and algorithm B lacks improvement number 2
 in the following list.
 
-Algorithm improvements:
+## Algorithm improvements:
 1.  Choosing a tower - The algorithm now avoids loading containers to towers
     with many containers headed to the different ports, thus avoiding situations
     where containers whose destination is not the current port need to be moved
@@ -98,7 +98,7 @@ The improvements can be seen in functions
 2. order_containers_for_Load which sorts the containers
 3. add_instructions_remove_all_above_containers which uses the move operation
 
-##Error handling  :
+## Error handling  :
 Error file structure:
 The program generates the errors directory if and only if an error was detected.
 The file / folder will be created in the location specified by the -output option or in the run directory if the argument was not given.
