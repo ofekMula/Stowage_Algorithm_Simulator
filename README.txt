@@ -1,17 +1,26 @@
+##Objective
 
-Error file structure:
-The program generates the errors directory if and only if an error was detected.
-The file / folder will be created in the location specified by the -output option or in the run directory if the argument was not given.
+An implementation of a stowage model for ships and a simulation to check stowage models.
+the program includes two modules:
 
-We mapped each error to one of the the following files :
-1. "fatal_errors.txt" - Errors that prevent the run of the entire simulation
-2. "travel_errors.txt" - Errors that made the simulator skip a travel
-3. "bad_algorithm_behavior_errors.txt" - Errors detected by the simulator when an algorithm performs an illegal instruction or fails to load/unload containers.
-4. "ignorable_errors.txt" - Any error which can be "fixed" and not hurt the run of the simulator 5. "Error code returned by the Algorithm.txt" - All the errors detected and returned by an algorithm while its simulated on a travel.
+1. Simulation
+A module that loads data from files and then runs several stowage algorithms on the same data to compare the efficiency of the algorithms. It should also be possible to compare algorithms on several “travels” (different routes and cargo). Of course the simulation should also check that stowage algorithms are correct, i.e. they do not miss containers loading or unloading and follow all the rules in general. The simulation would also initiate the ship with its weight calculator, so it can control simulation of weight triggers and check that the stowage algorithms comply.
 
-The errors are displayed in a special readable format, as explained in the previous exercise.
+2. Stowage Algorithm : is a strategy of loading and unloading containers off from a ship when reaching to a port during a travel.
 
-Multi-threading:
+##input files :
+Travel: a folder which presents a path of ports the ship will stop at. each travel contains:
+1.ShipPlan file - the structure of the ship.
+2.Route file - which port (and in which order) the ship will visit at
+3.cargo_data - container awaiting at each port
+
+##output files: 
+A CSV table format which contains :
+for each algorithm , the number of operations for eaxch travel, and number of errors (the algorthm did).
+the best algorithm will be the one without Errors and the smallest number of operations needed for loading and unloading the containers during the travel.
+
+
+##Multi-threading:
 1. Our multi threading model is based on the ThreadPoolExecutor example seen in class.
    If the number of threads parameter is 1 or less, the simulation stays sequential and does not spawn any new threads (ThreadPoolExecutor is not called).
 
@@ -54,7 +63,7 @@ Multi-threading:
         lock it using a lock_guard.
 
 
-Algorithms implementation:
+##Algorithms implementation:
 The algorithms are improved and once again are different but only by a little.
 As before, both algorithms inherit the StowageAlgorithm base class and
 only the differences are implemented in their own classes.
@@ -88,5 +97,18 @@ The improvements can be seen in functions
 1. get_next_load_instruction which uses get_idx_of_best_tower_for_load
 2. order_containers_for_Load which sorts the containers
 3. add_instructions_remove_all_above_containers which uses the move operation
+
+##Error handling  :
+Error file structure:
+The program generates the errors directory if and only if an error was detected.
+The file / folder will be created in the location specified by the -output option or in the run directory if the argument was not given.
+
+We mapped each error to one of the the following files :
+1. "fatal_errors.txt" - Errors that prevent the run of the entire simulation
+2. "travel_errors.txt" - Errors that made the simulator skip a travel
+3. "bad_algorithm_behavior_errors.txt" - Errors detected by the simulator when an algorithm performs an illegal instruction or fails to load/unload containers.
+4. "ignorable_errors.txt" - Any error which can be "fixed" and not hurt the run of the simulator 5. "Error code returned by the Algorithm.txt" - All the errors detected and returned by an algorithm while its simulated on a travel.
+
+The errors are displayed in a special readable format, as explained in the previous exercise.
 
 
