@@ -120,3 +120,6 @@ The errors are displayed in a special readable format, as explained in the previ
 * Program accordingly to Document of Requirements.
 * use templates.
 * Proper design of modules and classes,and divide the functionallity between them.
+* correct use of OOP.
+* ifstream and ostream.
+* Writing a makefile.
