@@ -113,3 +113,10 @@ We mapped each error to one of the the following files :
 The errors are displayed in a special readable format, as explained in the previous exercise.
 
 
+## What I learned :
+* Using Smart pointers - unique pointer and shared pointer
+* Thread Pool design pattern.
+* working with .so files.
+* Program accordingly to Document of Requirements.
+* use templates.
+* Proper design of modules and classes,and divide the functionallity between them.
