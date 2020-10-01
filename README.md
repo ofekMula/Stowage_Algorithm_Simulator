@@ -4,7 +4,8 @@ An implementation of a stowage model for ships and a simulation to check stowage
 the program includes two modules:
 
 ### 1. Simulation
-A module that loads data from files and then runs several stowage algorithms on the same data to compare the efficiency of the algorithms. It should also be possible to compare algorithms on several “travels” (different routes and cargo). Of course the simulation should also check that stowage algorithms are correct, i.e. they do not miss containers loading or unloading and follow all the rules in general. The simulation would also initiate the ship with its weight calculator, so it can control simulation of weight triggers and check that the stowage algorithms comply.
+A module that loads data from files and then runs several stowage algorithms on the same data to compare the efficiency of the algorithms. It should also be possible to compare algorithms on several “travels” (different routes and cargo). the simulation also checks that the stowage algorithms are correct, i.e. they do not miss containers loading or unloading and follow all the rules in general.
+And finally writes a table of result, how well did each algorithm on every travel.
 
 ### 2. Stowage Algorithm
 A strategy of loading and unloading containers off from a ship when reaching to a port during a travel.
