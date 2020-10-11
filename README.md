@@ -115,12 +115,14 @@ The errors are displayed in a special readable format, as explained in the previ
 
 
 ## What I learned :
-* Using Smart pointers - unique pointer and shared pointer
-* Thread Pool design pattern.
-* working with .so files.
-* Program accordingly to Document of Requirements.
-* use templates.
 * Proper design of modules and classes,and divide the functionallity between them.
-* correct use of OOP.
+* Correct use of OOP.
+* Using Singelton and Factory design patterns.
+* Thread Pool design pattern.
+* Working with standard template library.
+* Using Smart pointers - unique pointer and shared pointer.
+* Working with .so files.
+* Program accordingly to Document of Requirements.
+* Use templates.
 * ifstream and ostream.
 * Writing a makefile.
