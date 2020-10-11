@@ -115,6 +115,7 @@ The errors are displayed in a special readable format, as explained in the previ
 
 
 ## What I learned :
+* Program accordingly to Document of Requirements.
 * Proper design of modules and classes,and divide the functionallity between them.
 * Correct use of OOP.
 * Using Singelton and Factory design patterns.
@@ -122,7 +123,6 @@ The errors are displayed in a special readable format, as explained in the previ
 * Working with standard template library.
 * Using Smart pointers - unique pointer and shared pointer.
 * Working with .so files.
-* Program accordingly to Document of Requirements.
 * Use templates.
 * ifstream and ostream.
 * Writing a makefile.
